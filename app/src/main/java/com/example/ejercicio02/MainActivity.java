@@ -101,6 +101,15 @@ public class MainActivity extends AppCompatActivity {
                 contenedor.addView(contenedorNota);
             }
         }
+        if (requestCode == EDIT_NOTA && resultCode==RESULT_OK){
+            if (data !=null){
+                int posicion = data.getExtras().getInt("POS");
+                Nota nota = data.getExtras().getParcelable("NOTA");
+                listaNotas.get(posicion).setTitulo(nota.getTitulo());
+                listaNotas.get(posicion).setContenido(nota.getContenido());
+                repintarNotas();
+            }
+        }
     }
 
     private void repintarNotas() {
