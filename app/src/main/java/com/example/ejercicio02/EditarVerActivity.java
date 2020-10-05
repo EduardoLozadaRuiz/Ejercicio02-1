@@ -1,4 +1,4 @@
-package com.example.ejercicio02.modelos;
+package com.example.ejercicio02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
